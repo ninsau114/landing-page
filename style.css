@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -5,184 +6,62 @@
     scroll-behavior: smooth;
 }
 
-/* Header Styles */
 .header{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    background-color: #ffffff;
+    height: 10vh;
+    background-color: #f4f7fd;
     position: fixed;
     z-index: 100000;
-    padding: 0 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 }
 
-.logo {
+.header img{
+    width: 250px;
+    position: relative;
     display: flex;
-    align-items: center;
+    left: 200px;
+   
 }
 
-.logo img{
-    width: 180px;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-}
-
-.nav-menu ul{
+.header ul{
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    
 }
 
-.nav-menu ul li{
-    padding: 0 20px;
-    position: relative;
+.header ul li{
+    padding: 30px;
 }
 
-.nav-menu ul li a{
+.header ul li a{
     text-decoration: none;
     color: #9d9595;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Arial', sans-serif;
-    transition: color 0.3s ease;
-    padding: 30px 0;
-    display: block;
-    position: relative;
+    font-size: 20px;
+    
+    
 }
 
-.nav-menu ul li a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, rgb(30, 254, 116), rgb(58, 231, 247));
-    bottom: 20px;
-    left: 0;
-    transition: width 0.3s ease;
+.header ul li a:hover{
+    color: #000;
 }
 
-.nav-menu ul li a:hover:after {
-    width: 100%;
-}
-
-.nav-menu ul li a:hover{
-    color: #2d314d;
-}
-
-.cta-button {
-    background: linear-gradient(90deg, rgb(30, 254, 116), rgb(58, 231, 247));
+.header h3{
+    background-image:linear-gradient(90deg, rgb(30, 254, 116),rgb(58, 231, 247));
+    padding: 15px;
     color: #fff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 24px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(58, 231, 247, 0.2);
-}
+    position: relative;
+    right: 100px;
+    z-index: 20;
+    border-radius: 50px;
+    transition: 0.5s;
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(58, 231, 247, 0.3);
-    background: linear-gradient(90deg, rgb(40, 255, 123), rgb(72, 238, 252));
 }
-
-.hamburger {
-    display: none;
-    cursor: pointer;
+.header h3:hover{
+    scale: 1.2;
 }
-
-.hamburger .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease;
-    background-color: #2d314d;
-}
-
-/* Media Queries for Responsive Design */
-@media only screen and (max-width: 992px) {
-    .hamburger {
-        display: block;
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background-color: white;
-        width: 80%;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        padding: 30px 0;
-        margin: 20px auto;
-        left: -100%;
-        right: 0;
-        text-align: center;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-        right: 0;
-        margin: 20px auto;
-    }
-    
-    .nav-menu ul {
-        flex-direction: column;
-    }
-    
-    .nav-menu ul li {
-        margin: 10px 0;
-    }
-    
-    .nav-menu ul li a {
-        padding: 10px 0;
-    }
-    
-    .nav-menu ul li a:after {
-        bottom: 5px;
-    }
-    
-    .logo img {
-        width: 150px;
-    }
-    
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-}
-
 section{
     padding:0 0 50px 100px;
     
